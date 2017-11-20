@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h2>Conversations</h2>
+  <form class="form">
+    <input id="bearer-token" type="text" placeholder="Bearer Token">
+    <input id="bearer-form-input" type="submit" value="Submit">
+  </form>
+  <div id="conversations"></div>
+</div>
+
+<div class="jumbotron" style="text-align: left">
+<%# <div class="jumbotron" style="display: none"> %>
+  <div id="chat-log" style="width: 80%; height: 15em; overflow-y: scroll"></div>
+  <form class="form">
+    <input style="width: 70%" id="text-message" type="text" placeholder="Write a message">
+    <input id="send-button" type="submit" value="Send">
+  </form>
+  <div id="conversations"></div>
+</div>
