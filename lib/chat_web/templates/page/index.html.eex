@@ -1,18 +1,40 @@
-<div class="jumbotron">
-  <h2>Conversations</h2>
-  <form class="form">
-    <input id="bearer-token" type="text" placeholder="Bearer Token">
-    <input id="bearer-form-input" type="submit" value="Submit">
-  </form>
+<div class="jumbotron convos">
+  <div class="form form-inline">
+    <h4>Bestoweth the holy bearer token</h4>
+    <input id="bearer-token" class="form-control" type="text" placeholder="The token, it glimmers in the sun, shiny and chrome">
+  </div>
+  
+  <hr/> 
+  
+  <div class="section">
+    <div class="form form-inline entry-form">
+      <h4>Forgeth in flame, a righteous chat room</h4>
+      <input id="room-entry-txt" class="form-control" type="text" placeholder="Name thine room, sire">
+      <input id="room-entry-btn" class="btn btn-large" type="submit" value="Create">
+    </div>
+
+    <div class="form form-inline entry-form">
+      <h4>Infuse the room with thine peers</h4>
+      <input id="peer-entry-room" class="form-control" type="text" placeholder="The sacred room ID">
+      <input id="peer-entry-username" class="form-control" type="text" placeholder="Their handle, my leige">
+      <input id="peer-entry-btn" class="btn btn-large" type="submit" value="Add">
+    </div>
+  </div>
+  <hr/>
+
+  <div class="section">
+    <input id="list-conversations-btn" class="btn btn-primary btn-large" type="submit" value="Listeth thine sacred convos">
+  </div>
+
   <div id="conversations"></div>
 </div>
 
 <div class="jumbotron" style="text-align: left">
 <%# <div class="jumbotron" style="display: none"> %>
-  <div id="chat-log" style="width: 80%; height: 15em; overflow-y: scroll"></div>
-  <form class="form">
-    <input style="width: 70%" id="text-message" type="text" placeholder="Write a message">
-    <input id="send-button" type="submit" value="Send">
+  <div id="chat-log"></div>
+  <form class="form form-inline">
+    <input style="width: 70%" id="text-message" class="form-control" type="text" placeholder="Write a message">
+    <input id="send-button" class="btn btn-large btn-primary" type="submit" value="Send">
   </form>
   <div id="conversations"></div>
 </div>

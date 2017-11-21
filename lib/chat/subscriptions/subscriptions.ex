@@ -5,6 +5,7 @@ defmodule Chat.Subscriptions do
 
   import Ecto.Query, warn: false
   alias Chat.Repo
+  alias Chat.User
 
   alias Chat.Subscriptions.ChatSubscription
   alias Chat.ChatRoom
@@ -26,7 +27,13 @@ defmodule Chat.Subscriptions do
   Returns a list of subscribed chat rooms
   """
   def list_subscribed_rooms(user_id) do
-    Repo.all(from r in ChatRoom, inner_join: s in ChatSubscription, where: s.user_id == ^user_id, select: r)
+    query = from r in ChatRoom, 
+      inner_join: s in ChatSubscription, 
+      on: s.room_id == r.id,
+      where: s.user_id == ^user_id,
+      select: r
+    
+    Repo.all(query)
   end
 
   @doc """
@@ -61,6 +68,24 @@ defmodule Chat.Subscriptions do
     %ChatSubscription{}
     |> ChatSubscription.changeset(attrs)
     |> Repo.insert()
+  end
+
+  @doc """
+  Insert a chat subscription with a room_id and username.
+  """
+  def create_chat_subscription_username(%{"room_id" => room_id, "username" => username}) do
+    query = from u in User,
+      where: u.username == ^username,
+      select: u.id
+
+    case Repo.one(query) do
+      nil -> {:error, "User not found"}
+      uid -> 
+        Repo.insert(%ChatSubscription{
+          room_id: room_id,
+          user_id: uid
+        })
+    end
   end
 
   @doc """

@@ -21,7 +21,7 @@
 import socket from "./socket"
 import $ from "jquery"
 
-var base_url = "http://localhost:4000";
+var base_url = 'http://' + window.location.host;
 
 var token = "";
 var user_id = "";
@@ -30,28 +30,72 @@ var channel = null;
 
 
 $(document).ready(function() {
-  $('#bearer-form-input').click(function(e) {
-    e.preventDefault();
 
-    token = $('#bearer-token').val();
+  $('#list-conversations-btn').click(function(e) {
+    e.preventDefault();
 
     $.ajax({
       url: base_url + "/api/rooms",
       headers: {
-        "Authorization": "Bearer " + token
+        "Authorization": "Bearer " + $('#bearer-token').val()
       },
       success: function(res) {
-        let html_string = '';
+        let html_string = '<ul>';
         user_id = res.user;
         res.data.forEach(function(room) {
           html_string += `
-            <a class="chat-room-link" href="#" data-room-id="${room.id}">${room.name}</a>
+            <li><a class="chat-room-link" href="#" data-room-id="${room.id}">${room.name}</a></li>
           `;
-        })
+        });
+        html_string += '</ul>';
         $('#conversations').html(html_string);
       },
-      fail: function(stuff) {
-        alert(stuff);
+      error: function(error) {
+        console.error(error);
+        alert(JSON.stringify(error));
+      }
+    });
+  });
+
+  $('#room-entry-btn').click(function() {
+    $.ajax({
+      url: base_url + "/api/rooms",
+      headers: {
+        "Authorization": "Bearer " + $('#bearer-token').val()
+      },
+      method: 'POST',
+      data: {
+        name: $('#room-entry-txt').val()
+      },
+      success: function(res) {
+        console.log(res);
+        $('#peer-entry-room').val(res.data.id);
+      },
+      error: function(error) {
+        console.error(error);
+        alert(JSON.stringify(error));
+      }
+    });
+  });
+
+  $('#peer-entry-btn').click(function() {
+    $.ajax({
+      url: base_url + "/api/subscriptions",
+      headers: {
+        "Authorization": "Bearer " + $('#bearer-token').val()
+      },
+      method: 'POST',
+      data: {
+        room_id: $('#peer-entry-room').val(),
+        username: $('#peer-entry-username').val()
+      },
+      success: function(res) {
+        console.log(res);
+        alert("Successfully added user to room");
+      },
+      error: function(error) {
+        console.error(error);
+        alert(JSON.stringify(error));
       }
     });
   });
@@ -61,7 +105,7 @@ $(document).ready(function() {
     console.log("Joining room ", room_id);
     $('#chat-log').html('');
 
-    channel = socket.channel("room:" + room_id, {Authorization: "Bearer " + token});
+    channel = socket.channel("room:" + room_id, {Authorization: "Bearer " + $('#bearer-token').val()});
     channel.join()
       .receive("ok", resp => { console.log("Joined successfully", resp) })
       .receive("error", resp => { console.log("Unable to join", resp) })
@@ -73,20 +117,18 @@ $(document).ready(function() {
         console.log(msg);
         if (msg.user == user_id) {
           $('#chat-log').append(`
-            <div class="message right">
-              <span class="user">${msg.user}</span>
-              <span class="body">${msg.body}</span>
-            <div>
+            <div class="message">
+              <div class="right"><b>${msg.user}:</b> ${msg.body}</div>
+            </div>
           `);
         } else {
           $('#chat-log').append(`
-            <div class="message left">
-              <span class="user">${msg.user}</span>
-              <span class="body">${msg.body}</span>
-            <div>
+            <div class="message">
+              <div class="left"><b>${msg.user}:</b> ${msg.body}<div>
+            </div>
           `);
         }
-
+        updateScroll()
       }
     })
 
@@ -94,7 +136,7 @@ $(document).ready(function() {
       console.log(msg);
       $('#chat-log').append(`
         <div class="message user-enter">
-          <span class="user">${msg.user} entered the room</span>
+          <span class="user"><b>${msg.user}</b> hath sojourned into thine holy chapel</span>
         <div>
       `);
     })
@@ -118,9 +160,14 @@ $(document).ready(function() {
     }
 
     let msg = $('#text-message').val();
-
-    channel.push("new:msg", {user: user_id, body: msg, room: room_id});
-    
-    $('#text-message').val('');
+    if (msg != '') {
+      channel.push("new:msg", {user: user_id, body: msg, room: room_id});
+      $('#text-message').val('');
+    }
   });
 });
+
+function updateScroll(){
+  var element = document.getElementById("chat-log");
+  element.scrollTop = element.scrollHeight;
+}

@@ -2,10 +2,10 @@ defmodule ChatWeb.ChatRoomView do
   use ChatWeb, :view
   alias ChatWeb.ChatRoomView
 
-  def render("index.json", %{chat_rooms: chat_rooms, user_id: user_id}) do
+  def render("index.json", %{chat_rooms: chat_rooms, user: user}) do
     %{
       data: render_many(chat_rooms, ChatRoomView, "chat_room.json"),
-      user: user_id
+      user: user.username
     }
   end
 

@@ -14,8 +14,8 @@ defmodule ChatWeb.ChatSubscriptionController do
   @doc """
   Add a user to a chat room. 
   """
-  def create(conn, %{"chat_subscription" => chat_subscription_params}) do
-    with {:ok, %ChatSubscription{} = chat_subscription} <- Subscriptions.create_chat_subscription(chat_subscription_params) do
+  def create(conn, params = %{"room_id" => _room_id, "username" => _username}) do
+    with {:ok, %ChatSubscription{} = chat_subscription} <- Subscriptions.create_chat_subscription_username(params) do
       conn
       |> put_status(:created)
       |> put_resp_header("location", chat_subscription_path(conn, :show, chat_subscription))

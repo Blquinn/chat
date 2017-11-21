@@ -1,1 +1,62 @@
 /* This file is for your main application css. */
+
+.left {
+  float: left;
+  max-width: 75%;
+  background-color: burlywood;
+  padding: 0.25em;
+  padding-right: .5em;
+  margin: .25em;
+  border-radius: 5px;
+}
+
+.right {
+  float: right;
+  max-width: 75%;
+  background-color: thistle;
+  padding: 0.25em;
+  padding-left: .5em;
+  margin: .25em;
+  border-radius: 5px;
+}
+
+.user-enter {
+  text-align: center;
+}
+
+.convos div {
+  margin: 1em;
+}
+
+#bearer-token {
+  width: 80%;
+  text-align: center;
+}
+
+#chat-log {
+  overflow-y: auto;
+  height: 20em;
+}
+
+#conversations ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.message {
+  overflow: auto;
+}
+
+.message div {
+  word-wrap: break-word;
+}
+
+.entry-form {}
+
+.container hr {
+  border-top: 2px solid #bababa;
+}
+
+.convos hr {
+  width: 80%;
+}

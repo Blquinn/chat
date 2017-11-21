@@ -25,7 +25,7 @@ defmodule ChatWeb.Router do
   scope "/api", ChatWeb do
     pipe_through :api
 
-    resources "/subscriptions", ChatSubscriptionController, only: [:create]
+    resources "/subscriptions", ChatSubscriptionController, only: [:create, :show]
     resources "/rooms", ChatRoomController, only: [:create, :index]
   end
 end

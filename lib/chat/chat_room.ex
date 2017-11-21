@@ -24,5 +24,4 @@ defmodule Chat.ChatRoom do
     room = %ChatRoom{name: name}
     Repo.insert(room)
   end
-
 end

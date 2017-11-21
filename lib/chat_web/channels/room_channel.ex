@@ -3,6 +3,7 @@ defmodule ChatWeb.RoomChannel do
   require Logger
 
   alias Chat.TokenAuth
+  alias ChatWeb.Endpoint
 
   @doc """
   Authorize socket to subscribe and broadcast events on this channel & topic
@@ -24,10 +25,10 @@ defmodule ChatWeb.RoomChannel do
 
   def join("room:" <> room_id, auth_message, socket) do
     case TokenAuth.authenticate_chat_room(auth_message) do
-      {:ok, user_id} -> 
+      {:ok, user} -> 
         Process.flag(:trap_exit, true)
         :timer.send_interval(5000, :ping)
-        send(self, {:after_join, %{"info" => "User joined", "user" => user_id}})
+        send(self, {:after_join, %{"info" => "User joined", "user" => user.username}})
 
         {:ok, socket}
       _ -> {:error, %{reason: "unauthorized"}}
@@ -35,7 +36,7 @@ defmodule ChatWeb.RoomChannel do
   end
 
   def handle_info({:after_join, msg}, socket) do
-    broadcast! socket.topic, "user:entered", %{user: msg["user"]}
+    Endpoint.broadcast!(socket.topic, "user:entered", %{user: msg["user"]})
     push socket, "join", %{status: "connected"}
     {:noreply, socket}
   end
@@ -51,12 +52,13 @@ defmodule ChatWeb.RoomChannel do
 
   def terminate(reason, socket) do
     # broadcast! socket.topic, "user:left", %{body: "user left the room"}
+    # Endpoint.broadcast!(socket.topic, "user:left" %{body})
     Logger.debug("> leave #{inspect reason} #{inspect socket}")
     :ok
   end
 
   def handle_in("new:msg", msg, socket) do
-    broadcast! "room:" <> msg["room"], "new:msg", %{user: msg["user"], body: msg["body"]}
+    Endpoint.broadcast! socket.topic, "new:msg", %{user: msg["user"], body: msg["body"]}
     {:reply, {:ok, %{msg: msg["body"]}}, assign(socket, :user, msg["user_id"])}
   end
 end
