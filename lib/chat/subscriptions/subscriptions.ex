@@ -29,10 +29,9 @@ defmodule Chat.Subscriptions do
   def list_subscribed_rooms(user_id) do
     query = from r in ChatRoom, 
       inner_join: s in ChatSubscription, 
-      on: s.room_id == r.id,
+      on: s.chat_room_id == r.id,
       where: s.user_id == ^user_id,
       select: r
-    
     Repo.all(query)
   end
 
@@ -73,7 +72,7 @@ defmodule Chat.Subscriptions do
   @doc """
   Insert a chat subscription with a room_id and username.
   """
-  def create_chat_subscription_username(%{"room_id" => room_id, "username" => username}) do
+  def create_chat_subscription_username(%{"chat_room_id" => room_id, "username" => username}) do
     query = from u in User,
       where: u.username == ^username,
       select: u.id
@@ -82,7 +81,7 @@ defmodule Chat.Subscriptions do
       nil -> {:error, "User not found"}
       uid -> 
         Repo.insert(%ChatSubscription{
-          room_id: room_id,
+          chat_room_id: room_id,
           user_id: uid
         })
     end

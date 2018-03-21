@@ -4,6 +4,8 @@ defmodule ChatWeb.RoomChannel do
 
   alias Chat.TokenAuth
   alias ChatWeb.Endpoint
+  alias Chat.Messages.Message
+  alias Chat.Messages
 
   @doc """
   Authorize socket to subscribe and broadcast events on this channel & topic
@@ -57,8 +59,13 @@ defmodule ChatWeb.RoomChannel do
     :ok
   end
 
-  def handle_in("new:msg", msg, socket) do
-    Endpoint.broadcast! socket.topic, "new:msg", %{user: msg["user"], body: msg["body"]}
-    {:reply, {:ok, %{msg: msg["body"]}}, assign(socket, :user, msg["user_id"])}
+  def handle_in("new:msg", %{"user" => user, "body" => body, "room_id" => room_id}, socket) do
+    user_id = Map.get(user, "id")
+    message = %{user_id: user_id, chat_room_id: room_id, body: body, message_type: "user_message"}
+
+    spawn(fn -> Messages.create_message(message) end)
+
+    Endpoint.broadcast! socket.topic, "new:msg", %{user: user, message: message}
+    {:reply, {:ok, %{msg: body}}, assign(socket, :user, user_id)}
   end
 end

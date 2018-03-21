@@ -20,6 +20,10 @@
   border-radius: 5px;
 }
 
+.center {
+  text-align: center;
+}
+
 .user-enter {
   text-align: center;
 }
@@ -59,4 +63,12 @@
 
 .convos hr {
   width: 80%;
+}
+
+#chat {
+  display: none;
+}
+
+#logout-div {
+  margin: 1em;
 }

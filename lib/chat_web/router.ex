@@ -26,6 +26,8 @@ defmodule ChatWeb.Router do
     pipe_through :api
 
     resources "/subscriptions", ChatSubscriptionController, only: [:create, :show]
+    
     resources "/rooms", ChatRoomController, only: [:create, :index]
+    get "/rooms/:room_id/messages", MessageController, :list_room_messages
   end
 end

@@ -3,12 +3,17 @@ defmodule Chat.ChatRoom do
   import Ecto.Changeset
   alias Chat.ChatRoom
   alias Chat.Repo
+  alias Chat.Subscriptions.ChatSubscription
+  alias Chat.Messages.Message
 
 
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "chat_rooms" do
     field :name, :string
+
+    has_many :subscriptions, ChatSubscription
+    has_many :messages, Message
 
     timestamps()
   end
