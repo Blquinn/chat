@@ -10,7 +10,7 @@ defmodule Chat.Repo.Migrations.CreateChatSubscriptions do
       timestamps()
     end
 
-    create index(:chat_subscriptions, [:user_id])
-    create index(:chat_subscriptions, [:room_id])
+    create unique_index(:chat_subscriptions, [:user_id, :room_id])
+#    create index(:chat_subscriptions, [:room_id])
   end
 end

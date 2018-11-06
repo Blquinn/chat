@@ -29,7 +29,9 @@ defmodule ChatWeb.ChatRoomController do
   List a user's subscribed chat rooms 
   """
   def index(conn, _params) do
+    IO.puts(inspect(conn.assigns))
     chat_rooms = Subscriptions.list_subscribed_rooms(Map.get(conn.assigns[:current_user], :id))
+    IO.puts(inspect(chat_rooms))
     render(conn, "index.json", chat_rooms: chat_rooms, user: conn.assigns[:current_user])
   end
 

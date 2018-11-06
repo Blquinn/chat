@@ -18,13 +18,16 @@
 // Local files can be imported directly using relative
 // paths "./socket" or full ones "web/static/js/socket".
 
-import socket from "./socket"
+// import socket from "./socket"
+import {Socket} from 'phoenix';
 import $ from "jquery"
 
-var base_url = 'http://' + window.location.host;
-var auth_base = 'http://localhost:8000'
+// let socket = new Socket("/socket", {params: {token: window.userToken}});
+const socketEndpoint = '/socket';
+var socket = null;
 
-var token = "";
+var base_url = 'http://' + window.location.host;
+var auth_base = 'http://localhost:8000';
 var user = {};
 var room_id = "";
 var channel = null;
@@ -47,7 +50,7 @@ $(document).ready(function() {
 
   $('#list-conversations-btn').click(function(e) {
     e.preventDefault();
-    console.log(authToken());
+    // console.log(authToken());
     $.ajax({
       url: base_url + "/api/rooms",
       headers: {
@@ -264,6 +267,7 @@ function logIn(email, password) {
     },
     success: function(res) {
       setAuthData(res);
+      connectSocket();
       $('#chat').show();
       $('#login').hide();
       console.log(res);
@@ -280,6 +284,12 @@ function logOut() {
   window.location.reload();
 }
 
+function connectSocket() {
+    socket = new Socket(socketEndpoint, {params: {token: authToken()}});
+    socket.connect();
+    console.log('Connected to websocket');
+}
+
 function refreshToken(refresh_token, callback) {
   $.ajax({
     url: `${auth_base}/api/auth/o/token/`,
@@ -294,6 +304,7 @@ function refreshToken(refresh_token, callback) {
     },
     success: function(res) {
       setAuthData(res);
+      connectSocket();
       return callback(null, res)
     },
     error: function(error) {
@@ -303,7 +314,7 @@ function refreshToken(refresh_token, callback) {
 }
 
 function authToken() {
-  let data = getAuthData()
+  let data = getAuthData();
   if (data !== null) {
     return data.access_token
   }
@@ -318,7 +329,8 @@ function getAuthData() {
   let json = localStorage.getItem('auth_data');
   if (json !== null) {
     let data = JSON.parse(json);
-    if (Date.now() > data.expires_at) {
+    if (Date.now() < data.expires_at) {
+      console.log("Auth token expired.");
       refreshToken(data.refresh_token, (err, res) => {
         if (err !== null) {
           return null
@@ -330,3 +342,29 @@ function getAuthData() {
   }
   return null
 }
+
+function onStart() {
+  let json = localStorage.getItem("auth_data");
+  if (json == null) {
+    return;
+  }
+
+  let authData = JSON.parse(json);
+
+  if (authData.expires_at > Date.now()) {
+    return;
+  }
+
+  if (authData != null) {
+    refreshToken(authData.refresh_token, (err, res) => {
+      if (err != null) {
+        console.error("Error while refreshing token", err);
+        return;
+      }
+
+      setAuthData(res);
+    });
+  }
+}
+
+onStart();

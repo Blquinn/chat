@@ -9,5 +9,6 @@ defmodule Chat.Repo.Migrations.CreateChatRooms do
       timestamps()
     end
 
+    create unique_index(:chat_rooms, [:name])
   end
 end

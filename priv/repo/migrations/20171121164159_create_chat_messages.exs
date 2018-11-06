@@ -11,7 +11,7 @@ defmodule Chat.Repo.Migrations.CreateChatMessages do
       timestamps()
     end
 
-    create index(:chat_messages, [:user_id])
-    create index(:chat_messages, [:room_id])
+#    create index(:chat_messages, [:user_id])
+#    create index(:chat_messages, [:room_id])
   end
 end
