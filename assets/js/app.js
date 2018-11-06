@@ -254,17 +254,15 @@ function createMessageDiv(msg) {
 
 function logIn(email, password) {
   $.ajax({
-    url: `${auth_base}/api/auth/o/token/`,
+    url: base_url + `/api/auth`,
     data: {
-      client_id: "hMWQSBydhhY3SrllPO879srur2wUUjKR09Vnydf5",
-      grant_type: "password",
       email,
       password,
     },
     method: 'POST',
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
+    // headers: {
+    //   "Content-Type": "application/json"
+    // },
     success: function(res) {
       setAuthData(res);
       connectSocket();
@@ -274,7 +272,7 @@ function logIn(email, password) {
     },
     error: function(error) {
       console.error(error);
-      alert(error.responseJSON.error_description);
+      alert(error.responseJSON);
     }
   });
 }
@@ -316,12 +314,12 @@ function refreshToken(refresh_token, callback) {
 function authToken() {
   let data = getAuthData();
   if (data !== null) {
-    return data.access_token
+    return data.access_token;
   }
 }
 
 function setAuthData(data) {
-  data.expires_at = Date.now() + data.expires_in - 5
+  data.expires_at = Date.now() + data.expires_in - 5;
   localStorage.setItem('auth_data', JSON.stringify(data));
 }
 

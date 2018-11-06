@@ -7,9 +7,16 @@ defmodule ChatWeb.AuthController do
 
   action_fallback ChatWeb.FallbackController
 
-  def log_in(conn, %{"username" => username, "password" => password}) do
-    query = from u in User, where: u.username == ^username
-    user = Repo.one(query)
+  def log_in(conn, params = %{"password" => password}) do
+    user = get_user(params)
+
+    if user == :error do
+      conn
+      |> put_resp_header("content-type", "application/json")
+      |> send_resp(400, "{\"detail\": \"Invalid request.\"}")
+      |> halt()
+    end
+
     if user == nil do
       conn
       |> put_resp_header("content-type", "application/json")
@@ -27,7 +34,20 @@ defmodule ChatWeb.AuthController do
     |> put_resp_header("content-type", "application/json")
     |> send_resp(401, "{\"detail\": \"Authentication credentials were not provided.\"}")
     |> halt()
+  end
 
+  defp get_user(%{"username" => username, "password" => password}) do
+    query = from u in User, where: u.username == ^username
+    Repo.one(query)
+  end
+
+  defp get_user(%{"email" => email, "password" => password}) do
+    query = from u in User, where: u.email == ^email
+    Repo.one(query)
+  end
+
+  defp get_user(_params) do
+    :error
   end
 
 #  def create(conn, params = %{"name" => _room_name}) do
