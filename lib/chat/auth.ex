@@ -43,8 +43,6 @@ defmodule Chat.TokenAuth do
       end
     end)
     |> with_validation("email", &(is_binary(&1)))
-    |> with_validation("is_active", &(is_boolean(&1)))
-    |> with_validation("is_verified", &(is_boolean(&1)))
     |> with_validation("username", &(is_binary(&1)))
     |> with_validation("exp", &(validate_exp(&1)))
     |> with_signer(hs256("replace_me"))
@@ -56,8 +54,6 @@ defmodule Chat.TokenAuth do
     "user_id" => user_id,
     "username" => username,
     "email" => email,
-    "is_active" => is_active,
-    "is_verified" => is_verified,
     "exp" => exp,
   }, errors: []}) do
     case validate_exp(exp) do
@@ -66,8 +62,6 @@ defmodule Chat.TokenAuth do
           id: UUID.cast!(user_id),
           username: username,
           email: email,
-          verified: is_verified,
-          is_active: is_active
         }
         {:ok, user}
       false -> {:fail, "Expired token"}
@@ -87,6 +81,16 @@ defmodule Chat.TokenAuth do
   defp validate_exp(exp) do
     Timex.now
     |> Timex.before?(Timex.from_unix(exp))
+  end
+
+  # Creates a jwt
+  def create_jwt(%{:id => id, :username => username, :email => email}) do
+    %{user_id: id, username: username, email: email}
+    |> token
+    |> with_signer(hs256("replace_me"))
+    |> with_exp(Timex.shift(Timex.now, hours: 2)) # TODO: Config
+    |> sign
+    |> get_compact
   end
 
   def authenticate_chat_room(%{"Authorization" => "Bearer " <> token}) when token != "" do

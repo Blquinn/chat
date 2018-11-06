@@ -15,10 +15,21 @@ defmodule ChatWeb.Router do
     plug TokenAuth
   end
 
+  pipeline :public_api do
+    plug :accepts, ["json"]
+  end
+
   scope "/", ChatWeb do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+  end
+
+  # Un-authenticated api
+  scope "/api" do
+    pipe_through :public_api
+
+    post "/auth", ChatWeb.AuthController, :log_in
   end
 
   # Other scopes may use custom stacks.
@@ -26,7 +37,7 @@ defmodule ChatWeb.Router do
     pipe_through :api
 
     resources "/subscriptions", ChatSubscriptionController, only: [:create, :show]
-    
+#    resources "/auth", AuthController, only: [:log_in]
     resources "/rooms", ChatRoomController, only: [:create, :index]
     get "/rooms/:room_id/messages", MessageController, :list_room_messages
   end

@@ -44,7 +44,6 @@ defmodule Chat.Mixfile do
       {:timex, "~> 3.1"},
       {:timex_ecto, "~> 3.0"},
       {:guardian, "~> 1.0"},
-#      {:joken, "~> 2.0-rc0"},
       {:joken, "~> 1.5.0"},
     ]
   end
