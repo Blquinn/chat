@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2270ec3-8dbd-49de-a0d1-eb8fbdda716f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/chat/auth_user.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/socket.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/socket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.exs" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/dev.exs" beforeDir="false" afterPath="$PROJECT_DIR$/config/dev.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/chat/auth.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/chat/auth.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/chat_web/channels/user_socket.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/chat_web/channels/user_socket.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/chat_web/controllers/chat_room_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/chat_web/controllers/chat_room_controller.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix.exs" beforeDir="false" afterPath="$PROJECT_DIR$/mix.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mix.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mix.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20171119222745_create_chat_rooms.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/migrations/20171119222745_create_chat_rooms.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20171119223201_create_chat_subscriptions.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/migrations/20171119223201_create_chat_subscriptions.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/priv/repo/migrations/20171121164159_create_chat_messages.exs" beforeDir="false" afterPath="$PROJECT_DIR$/priv/repo/migrations/20171121164159_create_chat_messages.exs" afterDir="false" />
+    <list default="true" id="cd652d42-92fb-4179-bf6a-4d5f76078a14" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/chat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/chat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,181 +15,58 @@
     <session id="-1554293324">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="eex" value="1" />
-          <entry key="ex" value="26" />
-          <entry key="exs" value="7" />
-          <entry key="js" value="6" />
+          <entry key="exs" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="EEx" value="1" />
-          <entry key="Elixir Script" value="7" />
-          <entry key="Elixir file" value="26" />
-          <entry key="JavaScript" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="eex" value="198" />
-          <entry key="ex" value="7990" />
-          <entry key="exs" value="476" />
-          <entry key="js" value="2744" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="EEx" value="198" />
-          <entry key="Elixir Script" value="476" />
-          <entry key="Elixir file" value="7990" />
-          <entry key="JavaScript" value="2744" />
+          <entry key="Elixir Script" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/chat_web/channels/user_socket.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/chat_web/channels/room_channel.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20171119222745_create_chat_rooms.exs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20171119223201_create_chat_subscriptions.exs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20171121164159_create_chat_messages.exs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12780">
-              <caret line="363" selection-start-line="363" selection-end-line="363" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/chat_web/controllers/chat_room_controller.ex">
+        <entry file="file://$PROJECT_DIR$/config/dev.exs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deps/phoenix/assets/js/phoenix.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22716">
-              <caret line="631" column="31" selection-start-line="631" selection-start-column="31" selection-end-line="631" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/socket.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1044">
-              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/chat/auth_user.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+            <state relative-caret-position="288">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Elixir Module" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/config.exs" />
-        <option value="$PROJECT_DIR$/config/dev.exs" />
         <option value="$PROJECT_DIR$/mix.exs" />
-        <option value="$PROJECT_DIR$/lib/chat_web/router.ex" />
-        <option value="$PROJECT_DIR$/lib/chat_web/templates/page/index.html.eex" />
-        <option value="$PROJECT_DIR$/lib/chat/jwt_auth.ex" />
+        <option value="$PROJECT_DIR$/config/dev.exs" />
+        <option value="$PROJECT_DIR$/priv/repo/migrations/20171119222744_create_user.exs" />
+        <option value="$PROJECT_DIR$/lib/chat_web/views/user_view.ex" />
+        <option value="$PROJECT_DIR$/lib/chat_web/controllers/user_controller.ex" />
         <option value="$PROJECT_DIR$/lib/chat/auth_user.ex" />
-        <option value="$PROJECT_DIR$/lib/chat_web/controllers/chat_room_controller.ex" />
-        <option value="$PROJECT_DIR$/priv/repo/migrations/20171119223201_create_chat_subscriptions.exs" />
-        <option value="$PROJECT_DIR$/priv/repo/migrations/20171121164159_create_chat_messages.exs" />
-        <option value="$PROJECT_DIR$/priv/repo/migrations/20171119222745_create_chat_rooms.exs" />
-        <option value="$PROJECT_DIR$/assets/js/socket.js" />
-        <option value="$PROJECT_DIR$/lib/chat_web/channels/user_socket.ex" />
+        <option value="$PROJECT_DIR$/lib/chat_web/router.ex" />
         <option value="$PROJECT_DIR$/lib/chat/auth.ex" />
-        <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/lib/chat_web/channels/room_channel.ex" />
+        <option value="$PROJECT_DIR$/lib/chat_web.ex" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -210,9 +75,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/assets/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -238,12 +100,13 @@
       <path value="$PROJECT_DIR$/node_modules/to-fast-properties/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="134" />
-    <option name="y" value="43" />
-    <option name="width" value="3706" />
-    <option name="height" value="2117" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1170" />
+    <option name="y" value="1095" />
+    <option name="width" value="1542" />
+    <option name="height" value="961" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -259,56 +122,12 @@
             <path>
               <item name="chat" type="b2602c69:ProjectViewProjectNode" />
               <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chat" type="b2602c69:ProjectViewProjectNode" />
               <item name="chat" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="subscriptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="chat_web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="chat_web" type="462c0819:PsiDirectoryNode" />
-              <item name="channels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="chat_web" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chat" type="b2602c69:ProjectViewProjectNode" />
@@ -321,21 +140,23 @@
               <item name="priv" type="462c0819:PsiDirectoryNode" />
               <item name="repo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="chat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+              <item name="priv" type="462c0819:PsiDirectoryNode" />
+              <item name="repo" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -349,60 +170,73 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="phx.server" type="MixRunConfigurationType" factoryName="Elixir Mix">
+      <mix>
+        <argument>phx.server</argument>
+      </mix>
+      <envs>
+        <env name="MIX_ENV" value="dev" />
+      </envs>
+      <module-filters inherit-application-module-filters="true" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e2270ec3-8dbd-49de-a0d1-eb8fbdda716f" name="Default Changelist" comment="" />
-      <created>1537396653227</created>
+      <changelist id="cd652d42-92fb-4179-bf6a-4d5f76078a14" name="Default Changelist" comment="" />
+      <created>1541443737150</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1537396653227</updated>
-      <workItem from="1537396691555" duration="566000" />
-      <workItem from="1537397398630" duration="5723000" />
-      <workItem from="1537557399555" duration="259000" />
-      <workItem from="1537560064926" duration="4286000" />
-      <workItem from="1538247745306" duration="10299000" />
-      <workItem from="1539040650207" duration="42000" />
-      <workItem from="1541468027208" duration="105000" />
-      <workItem from="1541468156023" duration="142000" />
+      <updated>1541443737150</updated>
+    </task>
+    <task id="LOCAL-00001" summary="switch to jwt">
+      <created>1541457164814</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541457164814</updated>
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21422000" />
-  </component>
   <component name="ToolWindowManager">
-    <frame x="134" y="43" width="3706" height="2117" extended-state="6" />
+    <frame x="1182" y="1134" width="1542" height="961" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.277225" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="Designer" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32956383" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33441034" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="SBT Console" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Cargo" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49245688" visible="true" weight="0.20454545" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.2497332" />
+      <window_info id="Favorites" order="2" sideWeight="0.5075431" side_tool="true" weight="0.18836713" />
+      <window_info anchor="bottom" id="TypeScript" order="0" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" sideWeight="0.49815497" weight="0.21533613" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49758455" weight="0.4309724" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49973643" weight="0.32247898" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" weight="0.3097998" />
+      <window_info anchor="bottom" id="SFDX" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Log Manager" order="12" />
+      <window_info anchor="bottom" id="Debug Logs" order="13" />
+      <window_info anchor="bottom" id="Execute Anonymous" order="14" />
+      <window_info anchor="bottom" id="Salesforce" order="15" />
+      <window_info anchor="bottom" id="Version Control" order="16" show_stripe_button="false" weight="0.32563025" />
+      <window_info anchor="bottom" id="Python Console" order="17" weight="0.32878152" />
+      <window_info anchor="bottom" id="Event Log" order="18" sideWeight="0.5002636" side_tool="true" weight="0.33930454" />
+      <window_info anchor="bottom" id="Terminal" order="19" weight="0.32457983" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="20" weight="0.32947975" />
+      <window_info anchor="bottom" id="Inspection Results" order="21" weight="0.3561644" />
+      <window_info anchor="right" id="SciView" order="0" weight="0.24546425" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32977587" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" weight="0.32977587" />
+      <window_info anchor="right" id="Data View" order="6" weight="0.42956242" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,197 +245,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="switch to jwt" />
+    <option name="LAST_COMMIT_MESSAGE" value="switch to jwt" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/deps/joken/lib/joken.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5652">
-          <caret line="229" column="8" selection-start-line="229" selection-start-column="8" selection-end-line="229" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/prod.exs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/deps/phoenix/lib/phoenix/router.ex" />
     <entry file="file://$PROJECT_DIR$/config/dev.exs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mix.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1692">
-          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat.ex">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat/application.ex">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat/messages/message.ex">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat/messages/messages.ex">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat_web/router.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat_web/templates/page/index.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1548">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat_web/controllers/chat_subscription_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deps/ecto/lib/ecto/schema.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="347" column="4" selection-start-line="347" selection-start-column="4" selection-end-line="347" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deps/ecto/lib/ecto/uuid.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="142" column="6" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat/user.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat_web.ex">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat/subscriptions/subscriptions.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat/jwt_auth.ex" />
-    <entry file="file://$PROJECT_DIR$/deps/phoenix/lib/phoenix/token.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2160">
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deps/phoenix/priv/static/phoenix.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1871">
-          <caret line="725" column="13" selection-start-line="725" selection-start-column="13" selection-end-line="725" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat/auth.ex">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat_web/channels/user_socket.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat_web/channels/room_channel.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20171119222745_create_chat_rooms.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20171119223201_create_chat_subscriptions.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20171121164159_create_chat_messages.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12780">
-          <caret line="363" selection-start-line="363" selection-end-line="363" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deps/phoenix/assets/js/phoenix.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22716">
-          <caret line="631" column="31" selection-start-line="631" selection-start-column="31" selection-end-line="631" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/socket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat/auth_user.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/chat_web/controllers/chat_room_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
