@@ -15,10 +15,20 @@ defmodule ChatWeb.Router do
     plug TokenAuth
   end
 
+  pipeline :public_api do
+    plug :accepts, ["json"]
+  end
+
   scope "/", ChatWeb do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+  end
+
+  scope "/api", ChatWeb do
+    pipe_through :public_api
+
+    post "/auth", AuthController, :log_in
   end
 
   # Other scopes may use custom stacks.

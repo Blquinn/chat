@@ -54,6 +54,9 @@ config :chat, Chat.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "ben",
   password: "password",
-  database: "tapx",
+  database: "chat",
   hostname: "localhost",
   pool_size: 10
+
+config :chat,
+  jwt_secret_key: "replace_me"

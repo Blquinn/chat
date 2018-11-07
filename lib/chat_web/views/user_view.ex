@@ -4,4 +4,5 @@ defmodule ChatWeb.UserView do
   def render("user.json", %{user: user}) do
     Map.take(user, [:id, :username, :first_name, :last_name])
   end
+
 end

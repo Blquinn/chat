@@ -34,6 +34,8 @@ defmodule Chat.TokenAuth do
   end
 
   def validate_token(jwt) do
+    jwt_key = Application.get_env(:chat, :jwt_secret_key)
+
     jwt
     |> token
     |> with_validation("user_id", fn id ->
@@ -47,7 +49,7 @@ defmodule Chat.TokenAuth do
     |> with_validation("is_verified", &(is_boolean(&1)))
     |> with_validation("username", &(is_binary(&1)))
     |> with_validation("exp", &(validate_exp(&1)))
-    |> with_signer(hs256("replace_me"))
+    |> with_signer(hs256(jwt_key))
     |> verify
     |> handle_token
   end
