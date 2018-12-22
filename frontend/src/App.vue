@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import ChatContainer from './components/ChatContainer.vue';
+import ChatContainer from './modules/chat/ChatContainer.vue';
 
 @Component({
   components: {

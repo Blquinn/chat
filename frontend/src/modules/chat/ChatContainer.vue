@@ -12,23 +12,27 @@
 </template>
 
 <script lang="ts">
-    import {Component, Prop, Vue} from 'vue-property-decorator';
-    import ChatMessage from "@/models/ChatMessage";
+  import {Component, Prop, Vue} from 'vue-property-decorator';
+  import ChatMessage from "types";
 
-    @Component
+  @Component
     export default class ChatContainer extends Vue {
         public msgInput = '';
 
         @Prop() public currentUser!: string;
 
-        public chatHistory: Array<ChatMessage> = [
+        public chatHistory: ChatMessage[] = [
           {message: 'Hello', from: 'terry'},
           {message: 'Hello again', from: 'larry'},
         ];
 
-        sendMessage() {
-            if (this.msgInput === '') return;
-            this.chatHistory.push({message: this.msgInput, from: this.currentUser});
+        private sendMessage() {
+            if (this.msgInput === '') {
+              return;
+            }
+            const msg: ChatMessage = {message: this.msgInput, from: this.currentUser};
+            console.log(msg);
+            this.chatHistory.push(msg);
             this.msgInput = '';
         }
     }
